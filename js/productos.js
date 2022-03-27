@@ -78,15 +78,24 @@ const productos = [
 //MIRA CUANDO VOS LO PASAS ASI AL PRODUCTO, TE LO PASA TODO EN UNA SOLA FILA, NO TE LO PONE CON LAS PROPIEDADES QUE TIENE EN GRAL. OSEA LAS PROPIEDADES LAS TOMA PERO ME LO DEJA EN UNA SOLA FILA Y YO QIERO QUE SE VEA EN 3. Que recorra el array de productos pero que mantenga sus estilos. 
 
 
+const divUno = document.createElement("div");
+    divDos = document.createElement("div");
+    divDos.classList.add("container");
 const listado = document.getElementById("listado");
+listado.appendChild(divDos);
+const divElDentroContainer = listado.querySelector(".container");
+divElDentroContainer.appendChild(divUno);
 
-for(let producto of productos){
-    let contenedor = document.createElement("div");
-    contenedor.className = "container";
-    contenedor.id = producto.id;
-    contenedor.innerHTML = `
-    <div class="row size">
-        <div class="col-lg-4 col-md-6 col-sm-12">
+divUno.classList.add("row");
+divUno.classList.add("size");
+
+for (let producto of productos) {
+    let div = document.createElement("div");
+        div.classList.add("col-lg-4");
+        div.classList.add("col-md-6");
+        div.classList.add("col-sm-12");
+        div.id = producto.id;
+        div.innerHTML = `
             <div class="card">
                 <img src="${producto.imagen}" class="card-img-top" alt="Cartel Beer">
                 <div class="cardBody">
@@ -95,10 +104,8 @@ for(let producto of productos){
                     <button class="btn btn-dark bott">Comprar</button>
                 </div>
             </div>
-        </div>
-    </div>
-    `
-    listado.appendChild(contenedor);
+    `;
+    divUno.appendChild(div);
     console.log(listado);
 }
 
