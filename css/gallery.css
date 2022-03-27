@@ -1,0 +1,241 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/* Color de fondo */
+body {
+    background: radial-gradient(circle, white, black);
+}
+/* Estilos del Navbar */
+nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    transition: height 1s ease;
+}
+.navtop {
+    display: flex;
+}
+
+.navBrand {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    color: #fff;
+    text-shadow:0 0 10px #fff, 
+                0 0 20px #fff, 
+                0 0 10px #fff, 
+                0 0 30px #030303, 
+                0 0 40px #030303, 
+                0 0 50px #030303;
+}
+.navlink,.navtoggler {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 1rem 0 0;
+    color: #fff;
+    padding: 0.7rem 1rem;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 10px #fff, 
+                0px 0px 20px #fff, 
+                0px 0px 20px #030303, 
+                0px 0px 40px #030303, 
+                0px 0px 80px #030303;
+}
+.navlink:hover {
+    background: #fff;
+    color: #030303;
+    font-weight: bold;
+}
+.navtoggler {
+    display: none;
+}
+.navtop {
+    display: flex;
+    justify-content: space-between;
+}
+/* Fin del navbar */
+.encabezado {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f3f3f3;
+}
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 50px;
+}
+.columna {
+    flex: 20%;
+    max-width: 20%;
+    padding: 0 4px;
+}
+.columna img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100px;
+    filter: grayscale(100%);
+    transition: all .3s ease;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+    
+}
+.columna img:hover {
+    cursor: pointer;
+    filter: grayscale(0%);
+    box-shadow: 0 0 20px 2px #fdfdfd;
+    transform: scale(0.9);
+}
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, .5);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .7s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay .slideshow {
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.164);
+    color: rgb(61, 58, 58);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.slideshow img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    box-shadow: 0px 0px 10px #fff, 
+                0px 0px 20px #fff, 
+                0px 0px 20px #030303, 
+                0px 0px 40px #030303, 
+                0px 0px 80px #030303;
+}
+.btn-cerrar {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 35px;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    transition: all .2s ease;
+}
+.btn-cerrar:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.botones {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+.botones:hover >i {
+    transform: scale(1.1);
+    transition: all .2 ease;
+}
+.atras {
+    left: 20px;
+}
+.adelante {
+    right: 20px;
+}
+.mdi {
+    pointer-events: none;
+}
+/* mediaquery Galeria*/
+
+@media screen and (max-width: 800px){
+    .columna {
+        flex: 50%;
+        max-width: 50%;
+    }
+    .atras {
+        left: 5px;
+    }
+    .adelante {
+        right: 5px;
+    }
+    .slideshow {
+        width: 98%;
+    }
+
+}
+@media screen and (max-width: 800px){
+    .columna {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+}
+/* Media query navbar */
+@media screen and (max-width : 1000px) {
+    nav {
+        display: block;
+    }
+    .navBrand {
+        font-size: 2rem;
+    }
+    ul {
+        display: block;
+        margin-top: 2rem;
+        overflow: hidden;
+        height: 0px;
+    }
+    .navlink {
+        display: block;
+        text-align: center;
+        margin: 0.5rem 2rem;
+    }
+    .navtoggler {
+        display: inherit;
+        float: right;
+        margin: 0rem 2rem 0 0;
+    }
+    .container {
+        margin-top: 1rem;
+    }
+}

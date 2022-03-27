@@ -1,0 +1,172 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* Parametros Generales */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background: url(../Images/back2.jpg );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    transition: height 1s ease;
+}
+.navtop {
+    display: flex;
+}
+
+.navBrand {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 
+                    0 0 20px #fff, 
+                    0 0 10px #fff, 
+                    0 0 30px #00fffc, 
+                    0 0 40px #00fffc, 
+                    0 0 50px #00fffc;
+}
+.navlink,.navtoggler {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 1rem 0 0;
+    color: #fff;
+    padding: 0.7rem 1rem;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 10px #fff, 
+                0px 0px 20px #fff, 
+                0px 0px 20px #00fffc, 
+                0px 0px 40px #00fffc, 
+                0px 0px 80px #00fffc;
+}
+.navlink:hover {
+    background: #fff;
+    color: #00fffc;
+    font-weight: bold;
+}
+.navtoggler {
+    display: none;
+}
+.navtop {
+    display: flex;
+    justify-content: space-between;
+}
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15rem;
+    color: purple;
+    text-align: center;
+}
+.logo {
+    border-radius: 50%;
+    max-width: 10rem;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 10px #fff, 
+                0px 0px 20px #fff, 
+                0px 0px 20px #00fffc, 
+                0px 0px 40px #00fffc, 
+                0px 0px 80px #00fffc;
+}
+.middle {
+    max-width: 70rem;
+    padding: 4rem 0 2rem 0;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 
+                    0 0 20px #fff, 
+                    0 0 10px #fff, 
+                    0 0 30px #00fffc, 
+                    0 0 40px #00fffc, 
+                    0 0 50px #00fffc;
+}
+.middle h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+.middle p {
+    margin: 1rem;
+    font-weight: bold;
+}
+.elBtn {
+    padding: 0.7rem 2rem;
+    background-color: #00fffc;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 10px #fff, 
+                0px 0px 20px #fff, 
+                0px 0px 20px #00fffc, 
+                0px 0px 40px #00fffc, 
+                0px 0px 80px #00fffc; 
+}
+.elBtn:hover {
+    background: #fff;
+    color: #00fffc;
+    cursor: pointer;
+}
+@media screen and (max-width : 1000px) {
+    nav {
+        display: block;
+    }
+    .navBrand {
+        font-size: 2rem;
+    }
+    ul {
+        display: block;
+        margin-top: 2rem;
+        overflow: hidden;
+        height: 0px;
+    }
+    .navlink {
+        display: block;
+        text-align: center;
+        margin: 0.5rem 2rem; 
+    }
+    .navtoggler {
+        display: inherit;
+        float: right;
+        margin: 0rem 2rem 0 0;
+    }
+    .container {
+        margin-top: 1rem;
+    }
+    .middle h1 {
+        font-size: 2rem;
+    }
+    .logo {
+        max-width: 5rem;
+    }
+}
